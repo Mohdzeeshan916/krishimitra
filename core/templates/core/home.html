@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<div class="p-5 mb-5 bg-light rounded-4 shadow-sm text-center">
+    <h1 class="display-5 fw-bold text-success">
+        Smart Farming with KrishiMitra 🌾
+    </h1>
+
+    <p class="fs-5 mt-3">
+        Crop Recommendation • Disease Detection • Smart Farming
+    </p>
+
+    <p class="lead mt-3">
+        AI-powered assistant for modern farmers 🌱
+    </p>
+</div>
+
+<!-- Features Section -->
+<div class="row text-center">
+
+    <div class="col-md-4 mb-4">
+        <div class="card shadow h-100">
+            <div class="card-body">
+                <h5 class="fw-bold text-success">🌾 Crop Recommendation</h5>
+                <p>
+                    Get best crop suggestions using soil type, pH and rainfall.
+                </p>
+                <a href="/soil/" class="btn btn-outline-success">
+                    Explore
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+        <div class="card shadow h-100">
+            <div class="card-body">
+                <h5 class="fw-bold text-success">🌿 Disease Detection</h5>
+                <p>
+                    Upload a leaf image to detect plant disease.
+                </p>
+                <a href="/leaf/" class="btn btn-outline-success">
+                    Detect Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+        <div class="card shadow h-100">
+            <div class="card-body">
+                <h5 class="fw-bold text-success">🚜 Smart Farming</h5>
+                <p>
+                    Technology-driven farming solutions for better yield.
+                </p>
+                <button class="btn btn-outline-secondary" disabled>
+                    Coming Soon
+                </button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

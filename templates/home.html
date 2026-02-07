@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<div class="p-5 mb-5 bg-light rounded-4 shadow-sm text-center">
+    <h1 class="display-5 fw-bold text-success">
+        Smart Farming with KrishiMitra 🌾
+    </h1>
+    <p class="fs-5 mt-3">
+        Crop Recommendation • Disease Detection • Farmer Support
+    </p>
+
+    <!-- Single Primary CTA -->
+    <a href="/leaf/" class="btn btn-success btn-lg mt-3 px-4">
+        <i class="fa-solid fa-leaf"></i> Detect Plant Disease
+    </a>
+</div>
+
+<!-- Features Section -->
+<div class="row text-center g-4">
+
+    <!-- Crop Recommendation -->
+    <div class="col-md-4">
+        <div class="card shadow h-100 border-0">
+            <div class="card-body">
+                <i class="fa-solid fa-seedling fa-3x text-success mb-3"></i>
+                <h5 class="fw-bold">Crop Recommendation</h5>
+                <p>
+                    Get the best crop suggestions based on soil and seasonal conditions.
+                </p>
+                <a href="/soil/" class="btn btn-outline-success">
+                    Try Now
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Disease Detection -->
+    <div class="col-md-4">
+        <div class="card shadow h-100 border-0">
+            <div class="card-body">
+                <i class="fa-solid fa-leaf fa-3x text-success mb-3"></i>
+                <h5 class="fw-bold">Disease Detection</h5>
+                <p>
+                    Upload a leaf image to detect plant disease and get guidance.
+                </p>
+                <a href="/leaf/" class="btn btn-outline-success">
+                    Upload Leaf
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Smart Farming -->
+    <div class="col-md-4">
+        <div class="card shadow h-100 border-0">
+            <div class="card-body">
+                <i class="fa-solid fa-tractor fa-3x text-success mb-3"></i>
+                <h5 class="fw-bold">Smart Farming</h5>
+                <p>
+                    Technology-driven solutions to empower modern farmers.
+                </p>
+                <a href="#" class="btn btn-outline-success">
+                    Learn More
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <div class="card shadow">
+      <div class="card-body">
+
+        <h3 class="text-center mb-3">Soil Crop Recommendation 🌾</h3>
+
+        <form method="POST">
+          {% csrf_token %}
+
+          <div class="mb-3">
+            <label>Soil Type</label>
+            <select name="soil" class="form-control" required>
+              <option value="loamy">Loamy</option>
+              <option value="clayey">Clayey</option>
+              <option value="sandy">Sandy</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label>Season</label>
+            <select name="season" class="form-control" required>
+              <option value="kharif">Kharif</option>
+              <option value="rabi">Rabi</option>
+            </select>
+          </div>
+
+          <div class="d-grid">
+            <button class="btn btn-success">Recommend</button>
+          </div>
+        </form>
+
+        {% if crops %}
+<hr>
+<div class="result-box">
+    <h5>Recommended Crops:</h5>
+    <ul>
+        {% for crop in crops %}
+        <li>{{ crop }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,57 @@
+/* ===== GLOBAL ===== */
+body {
+    background: linear-gradient(120deg, #e8f5e9, #ffffff);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.nav-link {
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #c8e6c9 !important;
+    transform: translateY(-2px);
+}
+
+/* ===== CARDS ===== */
+.card {
+    border-radius: 20px;
+    animation: fadeInUp 0.8s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== BUTTONS ===== */
+.btn-success {
+    background: linear-gradient(45deg, #2e7d32, #66bb6a);
+    border: none;
+}
+
+.btn-success:hover {
+    background: linear-gradient(45deg, #1b5e20, #43a047);
+    transform: scale(1.03);
+}
+
+/* ===== RESULT BOX ===== */
+.alert {
+    border-radius: 15px;
+}
+
+/* ===== FILE INPUT ===== */
+input[type="file"] {
+    cursor: pointer;
+}

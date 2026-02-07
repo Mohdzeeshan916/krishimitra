@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <div class="card shadow p-4">
+                <h3 class="text-center text-success mb-3">
+                    🌾 Crop Recommendation
+                </h3>
+
+                <form method="POST">
+                    {% csrf_token %}
+
+                    <label class="form-label">Soil Type</label>
+                    <select name="soil" class="form-control" required>
+                        <option value="">-- Select --</option>
+                        <option>Loamy</option>
+                        <option>Clay</option>
+                        <option>Sandy</option>
+                    </select>
+
+                    <label class="form-label mt-2">Season</label>
+                    <select name="season" class="form-control" required>
+                        <option value="">-- Select --</option>
+                        <option>Kharif</option>
+                        <option>Rabi</option>
+                        <option>Zaid</option>
+                    </select>
+
+                    <label class="form-label mt-2">Soil pH</label>
+                    <input type="number" step="0.1" name="ph" class="form-control" required>
+
+                    <label class="form-label mt-2">Rainfall (mm)</label>
+                    <input type="number" name="rainfall" class="form-control" required>
+
+                    <button class="btn btn-success w-100 mt-3">
+                        Recommend Crop
+                    </button>
+                </form>
+
+                {% if result %}
+                <div class="alert alert-success mt-4">
+                    <h5>🌱 Recommended Crop</h5>
+                    <p><b>{{ result.crop }}</b></p>
+                    <p>💧 Water: {{ result.water }}</p>
+                    <p>🧪 Fertilizer: {{ result.fertilizer }}</p>
+                </div>
+                {% endif %}
+
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

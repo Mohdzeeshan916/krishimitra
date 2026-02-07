@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container mt-5">
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <div class="card shadow-lg p-4">
+                <h3 class="text-center text-success mb-2">
+                    🌿 Plant Disease Detection
+                </h3>
+
+                <p class="text-center text-muted mb-4">
+                    Upload a clear leaf image to analyze plant health
+                </p>
+
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <label class="form-label fw-bold">
+                        <i class="fa-solid fa-image"></i> Upload Leaf Image
+                    </label>
+
+                    <input type="file" name="leaf" class="form-control" required>
+
+                    <div class="d-grid mt-4">
+                        <button class="btn btn-success btn-lg">
+                            <i class="fa-solid fa-microscope"></i>
+                            Analyze Leaf
+                        </button>
+                    </div>
+                </form>
+
+                {% if result %}
+                <div class="alert alert-info mt-4 text-center">
+                    <h5 class="mb-2">
+                        🧪 Analysis Result
+                    </h5>
+                    <p class="fw-bold text-danger mb-0">
+                        {{ result }}
+                    </p>
+                </div>
+                {% endif %}
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
